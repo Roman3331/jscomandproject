@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center min-h-screen bg-[#030712]">
+    <nav class="bg-[#111827] text-gray-100 p-4 fixed w-full top-0 z-10 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <button id="sidebar-toggle" class="top-3 bg-[#692be0] text-gray-100 p-2 rounded hover:bg-[#814DE5]" aria-label="Toggle sidebar">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <a href="#" class="text-2xl font-bold text-[#814DE5]">Virtual Bookstore</a>
+            <button id="hamburger" class="md:hidden focus:outline-none" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <div id="nav-menu" class="hidden md:flex space-x-4">
+                <a href="#" class="nav-link category-link" data-category="all">All Books</a>
+                <a href="#" class="nav-link category-link" data-category="fiction">Fiction</a>
+                <a href="#" class="nav-link category-link" data-category="non-fiction">Non-Fiction</a>
+                <a href="#" class="nav-link category-link" data-category="science">Science</a>
+                <a href="#" class="nav-link category-link" data-category="history">History</a>
+                <a href="#" class="nav-link category-link" data-category="fantasy">Fantasy</a>
+                <a href="#" class="nav-link category-link" data-category="mystery">Mystery</a>
+                <a href="#" class="nav-link" id="game-link">Play Game</a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <input type="text" id="user-name" placeholder="Your Name" class="p-1 rounded bg-[#1F2937] text-gray-200 border border-2 border-gray-700 focus:border-[#692be0] focus:outline-none" aria-label="Enter your name">
+                <button id="greet-button" class="bg-[#692be0] px-2 py-1 rounded text-gray-100 hover:bg-[#814DE5]">Greet</button>
+                <span id="greeting" class="hidden text-blue-300" aria-live="polite"></span>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#111827] p-4">
+            <a href="#" class="block py-2 nav-link category-link" data-category="all">All Books</a>
+            <a href="#" class="block py-2 nav-link category-link" data-category="fiction">Fiction</a>
+            <a href="#" class="block py-2 nav-link category-link" data-category="non-fiction">Non-Fiction</a>
+            <a href="#" class="block py-2 nav-link category-link" data-category="science">Science</a>
+            <a href="#" class="block py-2 nav-link category-link" data-category="history">History</a>
+            <a href="#" class="block py-2 nav-link category-link" data-category="fantasy">Fantasy</a>
+            <a href="#" class="block py-2 nav-link category-link" data-category="mystery">Mystery</a>
+            <a href="#" class="block py-2 nav-link" id="mobile-game-link">Play Game</a>
+        </div>
+    </nav>
+
+    <aside id="sidebar" class="fixed top-20 w-64 bg-[#111827] text-gray-100 transform -translate-x-full transition-transform duration-300 md:translate-x-0 md:static md:w-1/1 md:h-auto z-20">
+        <div class="p-4">
+            <h2 class="text-xl font-bold mb-4">Filters</h2>
+            <div class="mb-4">
+                <h3 class="font-semibold">Price Range</h3>
+                <input type="range" min="0" max="100" value="50" id="price-filter" class="w-full" aria-label="Price range filter">
+                <span id="price-value" class="text-gray-400">$50</span>
+            </div>
+            <div class="mb-4">
+                <h3 class="font-semibold">Sort By</h3>
+                <select id="sort-filter" class="w-full p-2 bg-[#1F2937] rounded text-gray-200" aria-label="Sort books">
+                    <option value="title-asc">Title (A-Z)</option>
+                    <option value="title-desc">Title (Z-A)</option>
+                    <option value="price-asc">Price (Low to High)</option>
+                    <option value="price-desc">Price (High to Low)</option>
+                </select>
+            </div>
+            <button id="apply-filters" class="bg-[#692be0] text-gray-100 py-2 px-4 rounded hover:bg-[#814DE5] w-full">Apply Filters</button>
+        </div>
+    </aside>
+
+    <section class="jumbotron flex flex-col items-center text-center mt-[10rem] py-10 px-4 w-[80%] text-gray-100 bg-[#111827] rounded-xl">
+        <h1 class="font-bold">Welcome to <span class="text-[#692be0]">Virtual Bookstore</span></h1>
+        <p class="mt-2">Explore our vast collection of books across various genres and enjoy our interactive Book Catcher game!</p>
+        <a href="#book-grid" class="mt-4 inline-block bg-[#692be0] text-gray-100 py-2 px-4 rounded hover:bg-[#814DE5]">Shop Now</a>
+    </section>
+
+    <main class="container mx-auto mt-20 flex-grow">
+        <h1 id="content-header" class="text-3xl font-bold my-4 text-center text-gray-100">Browse Our Collection</h1>
+        <div class="my-4 flex justify-center">
+            <input type="text" id="search-bar" placeholder="Search books..." class="p-2 rounded-l w-1/2 bg-[#1F2937] text-gray-200 border border-2 border-gray-700 focus:border-[#692be0] focus:outline-none" aria-label="Search books">
+            <button id="search-button" class="bg-[#692be0] text-gray-100 p-2 rounded-r hover:bg-[#814DE5]">Search</button>
+        </div>
+        <div id="book-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"></div>
+        <div id="game-section" class="flex justify-center hidden">
+            <div class="text-center">
+                <canvas id="gameCanvas" width="400" height="400" aria-label="Book Catcher Game"></canvas>
+                <div class="mt-4">
+                    <button id="restart-game" class="bg-[#692be0] text-gray-100 p-2 rounded hover:bg-[#814DE5]">Restart Game</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#111827] text-gray-300 p-6 mt-8 mb-8 rounded-xl">
+        <div class="container mx-auto text-center">
+            <p class="mb-2">Developed by: Team Virtual Bookstore (Кузів Роман, Новоселецький Богдан, Кузишин Дмитро)</p>
+            <p class="mb-2">Contact us: <a href="mailto:support@virtualbookstore.com" class="text-[#814DE5] hover:underline">support@virtualbookstore.com</a></p>
+            <p>© 2025 Virtual Bookstore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

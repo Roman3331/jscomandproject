@@ -1,0 +1,158 @@
+{
+  "fiction": [
+    {
+      "title": "1984",
+      "description": "A dystopian novel by George Orwell about totalitarianism.",
+      "image": "https://via.placeholder.com/150?text=1984",
+      "price": 12.99
+    },
+    {
+      "title": "Pride and Prejudice",
+      "description": "Jane Austen's classic romance novel.",
+      "image": "https://via.placeholder.com/150?text=Pride+and+Prejudice",
+      "price": 9.99
+    },
+    {
+      "title": "The Great Gatsby",
+      "description": "F. Scott Fitzgerald's tale of the American Dream.",
+      "image": "https://via.placeholder.com/150?text=The+Great+Gatsby",
+      "price": 10.50
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "description": "Harper Lee's exploration of racial injustice.",
+      "image": "https://via.placeholder.com/150?text=To+Kill+a+Mockingbird",
+      "price": 11.75
+    }
+  ],
+  "non-fiction": [
+    {
+      "title": "Sapiens",
+      "description": "Yuval Noah Harari's history of humankind.",
+      "image": "https://via.placeholder.com/150?text=Sapiens",
+      "price": 14.99
+    },
+    {
+      "title": "Educated",
+      "description": "Tara Westover's memoir of self-education.",
+      "image": "https://via.placeholder.com/150?text=Educated",
+      "price": 13.25
+    },
+    {
+      "title": "Atomic Habits",
+      "description": "James Clear's guide to building good habits.",
+      "image": "https://via.placeholder.com/150?text=Atomic+Habits",
+      "price": 16.00
+    },
+    {
+      "title": "The Immortal Life",
+      "description": "Rebecca Skloot's story of Henrietta Lacks.",
+      "image": "https://via.placeholder.com/150?text=The+Immortal+Life",
+      "price": 12.50
+    }
+  ],
+  "science": [
+    {
+      "title": "A Brief History of Time",
+      "description": "Stephen Hawking's cosmology explained.",
+      "image": "https://via.placeholder.com/150?text=A+Brief+History",
+      "price": 15.99
+    },
+    {
+      "title": "The Selfish Gene",
+      "description": "Richard Dawkins on evolutionary biology.",
+      "image": "https://via.placeholder.com/150?text=The+Selfish+Gene",
+      "price": 13.75
+    },
+    {
+      "title": "Cosmos",
+      "description": "Carl Sagan's journey through the universe.",
+      "image": "https://via.placeholder.com/150?text=Cosmos",
+      "price": 14.25
+    },
+    {
+      "title": "The Double Helix",
+      "description": "James Watson's account of DNA discovery.",
+      "image": "https://via.placeholder.com/150?text=The+Double+Helix",
+      "price": 11.99
+    }
+  ],
+  "history": [
+    {
+      "title": "Guns, Germs, and Steel",
+      "description": "Jared Diamond on societal development.",
+      "image": "https://via.placeholder.com/150?text=Guns+Germs+Steel",
+      "price": 16.50
+    },
+    {
+      "title": "The Silk Roads",
+      "description": "Peter Frankopan's history of trade routes.",
+      "image": "https://via.placeholder.com/150?text=The+Silk+Roads",
+      "price": 15.25
+    },
+    {
+      "title": "SPQR",
+      "description": "Mary Beard's history of Ancient Rome.",
+      "image": "https://via.placeholder.com/150?text=SPQR",
+      "price": 14.75
+    },
+    {
+      "title": "The Wright Brothers",
+      "description": "David McCullough on aviation pioneers.",
+      "image": "https://via.placeholder.com/150?text=The+Wright+Brothers",
+      "price": 13.99
+    }
+  ],
+  "fantasy": [
+    {
+      "title": "The Hobbit",
+      "description": "J.R.R. Tolkien's fantasy adventure.",
+      "image": "https://via.placeholder.com/150?text=The+Hobbit",
+      "price": 12.25
+    },
+    {
+      "title": "Harry Potter",
+      "description": "J.K. Rowling's magical saga begins.",
+      "image": "https://via.placeholder.com/150?text=Harry+Potter",
+      "price": 11.50
+    },
+    {
+      "title": "A Game of Thrones",
+      "description": "George R.R. Martin's epic fantasy.",
+      "image": "https://via.placeholder.com/150?text=A+Game+of+Thrones",
+      "price": 15.99
+    },
+    {
+      "title": "The Name of the Wind",
+      "description": "Patrick Rothfuss's tale of Kvothe.",
+      "image": "https://via.placeholder.com/150?text=The+Name+of+the+Wind",
+      "price": 14.50
+    }
+  ],
+  "mystery": [
+    {
+      "title": "The Da Vinci Code",
+      "description": "Dan Brown's thrilling mystery.",
+      "image": "https://via.placeholder.com/150?text=The+Da+Vinci+Code",
+      "price": 13.25
+    },
+    {
+      "title": "Gone Girl",
+      "description": "Gillian Flynn's psychological thriller.",
+      "image": "https://via.placeholder.com/150?text=Gone+Girl",
+      "price": 12.75
+    },
+    {
+      "title": "Sherlock Holmes",
+      "description": "Arthur Conan Doyle's detective stories.",
+      "image": "https://via.placeholder.com/150?text=Sherlock+Holmes",
+      "price": 10.99
+    },
+    {
+      "title": "Big Little Lies",
+      "description": "Liane Moriarty's domestic mystery.",
+      "image": "https://via.placeholder.com/150?text=Big+Little+Lies",
+      "price": 14.00
+    }
+  ]
+}
